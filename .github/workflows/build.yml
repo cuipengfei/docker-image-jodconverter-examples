@@ -36,7 +36,6 @@ jobs:
             ${{ env.IMAGE_FQDN }}:rest
       - name: Push REST
         uses: docker/build-push-action@v3
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           context: .
           platforms: linux/amd64
