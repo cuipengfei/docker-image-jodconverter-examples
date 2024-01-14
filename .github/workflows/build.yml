@@ -4,7 +4,7 @@ on:
   push:
 
 env:
-  IMAGE_FQDN: ghcr.io/ThoughtWorksInc/JodConverter
+  IMAGE_FQDN: ghcr.io/ThoughtWorksInc/jodconverter
   BASE_VERSION: 0.1.6
 
 jobs:
