@@ -38,4 +38,5 @@ RUN ./gradlew -x test :samples:spring-boot-rest:build \
 FROM jodconverter-app-base as rest
 COPY --from=jodconverter-build-rest /dist/jodconverter-rest.war ${JAR_FILE_BASEDIR}/${JAR_FILE_NAME}
 # support more fonts
-COPY fonts/* /usr/share/fonts/chinese/
+COPY cjk-fonts/* /usr/share/fonts/cjk/
+COPY condensed-fonts/* /usr/share/fonts/condensed/
