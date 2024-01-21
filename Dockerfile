@@ -42,3 +42,4 @@ COPY ./profile/LibreOffice/4/user /tmp/jodconverter/user
 # support more fonts
 COPY cjk-fonts/* /usr/share/fonts/cjk/
 COPY condensed-fonts/* /usr/share/fonts/condensed/
+COPY ms-sub-fonts/* /usr/share/fonts/ms-sub-fonts/
