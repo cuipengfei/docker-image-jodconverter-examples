@@ -20,7 +20,6 @@ CMD ["--spring.config.additional-location=optional:/etc/app/"]
 #  ----------------------------------  build our jodconvert builder, so source code with build tools
 FROM bellsoft/liberica-openjdk-debian:17 as builder
 RUN apt-get update \
-  && apt-get install -y locales locales-all \
   && apt-get -y install git \
   && git clone https://github.com/cuipengfei/jodconverter-samples /tmp/jodconverter-samples \
   ## fixing https://github.com/jodconverter/jodconverter-samples/issues/2
