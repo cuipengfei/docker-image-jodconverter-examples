@@ -28,6 +28,14 @@ RUN apt-get update \
   && chmod +x /tmp/jodconverter-samples/gradlew \
   && mkdir /dist
 
+# support more fonts
+COPY cjk-fonts/* /usr/share/fonts/cjk/
+COPY condensed-fonts/* /usr/share/fonts/condensed/
+COPY ms-sub-fonts/* /usr/share/fonts/ms-sub-fonts/
+
+# add user profile config files
+COPY ./profile/LibreOffice/4/user /tmp/jodconverter/user
+
 #  ----------------------------------  rest build
 FROM builder as jodconverter-build-rest
 WORKDIR /tmp/jodconverter-samples
@@ -37,9 +45,3 @@ RUN ./gradlew -x test :samples:spring-boot-rest:build \
 #  ----------------------------------  REST prod image
 FROM jodconverter-app-base as rest
 COPY --from=jodconverter-build-rest /dist/jodconverter-rest.war ${JAR_FILE_BASEDIR}/${JAR_FILE_NAME}
-# add user profile config files
-COPY ./profile/LibreOffice/4/user /tmp/jodconverter/user
-# support more fonts
-COPY cjk-fonts/* /usr/share/fonts/cjk/
-COPY condensed-fonts/* /usr/share/fonts/condensed/
-COPY ms-sub-fonts/* /usr/share/fonts/ms-sub-fonts/
