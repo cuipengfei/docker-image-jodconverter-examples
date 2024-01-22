@@ -14,7 +14,6 @@ RUN mkdir -p ${JAR_FILE_BASEDIR} /etc/app \
   && chmod +x /docker-entrypoint.sh \
   && chown $NONPRIVUSER:$NONPRIVGROUP /var/log/app.log /var/log/app.err
 
-
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["--spring.config.additional-location=optional:/etc/app/"]
 
@@ -28,14 +27,6 @@ RUN apt-get update \
   && chmod +x /tmp/jodconverter-samples/gradlew \
   && mkdir /dist
 
-# support more fonts
-COPY cjk-fonts/* /usr/share/fonts/cjk/
-COPY condensed-fonts/* /usr/share/fonts/condensed/
-COPY ms-sub-fonts/* /usr/share/fonts/ms-sub-fonts/
-
-# add user profile config files
-COPY ./profile/LibreOffice/4/user /tmp/jodconverter/user
-
 #  ----------------------------------  rest build
 FROM builder as jodconverter-build-rest
 WORKDIR /tmp/jodconverter-samples
@@ -44,4 +35,13 @@ RUN ./gradlew -x test :samples:spring-boot-rest:build \
 
 #  ----------------------------------  REST prod image
 FROM jodconverter-app-base as rest
+
+# support more fonts
+COPY cjk-fonts/* /usr/share/fonts/cjk/
+COPY condensed-fonts/* /usr/share/fonts/condensed/
+COPY ms-sub-fonts/* /usr/share/fonts/ms-sub-fonts/
+
+# add user profile config files
+COPY ./profile/LibreOffice/4/user /tmp/jodconverter/user
+
 COPY --from=jodconverter-build-rest /dist/jodconverter-rest.war ${JAR_FILE_BASEDIR}/${JAR_FILE_NAME}
