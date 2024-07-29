@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <oor:items xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<item oor:path="/org.openoffice.Office.Common/Filter/PDF/Export"><prop oor:name="ExportFormFields" oor:op="fuse"><value>false</value></prop></item>
 <item oor:path="/org.openoffice.Office.Common/Font/SourceViewFont"><prop oor:name="FontName" oor:op="fuse"><value>自动</value></prop></item>
 <item oor:path="/org.openoffice.Office.Common/Font/Substitution/FontPairs"><node oor:name="_0" oor:op="replace"><prop oor:name="Always" oor:op="fuse"><value>true</value></prop><prop oor:name="ReplaceFont" oor:op="fuse"><value>Arial</value></prop><prop oor:name="OnScreenOnly" oor:op="fuse"><value>true</value></prop><prop oor:name="SubstituteFont" oor:op="fuse"><value>Arimo</value></prop></node></item>
 <item oor:path="/org.openoffice.Office.Common/Font/Substitution/FontPairs"><node oor:name="_1" oor:op="replace"><prop oor:name="Always" oor:op="fuse"><value>true</value></prop><prop oor:name="ReplaceFont" oor:op="fuse"><value>Bahnschrift Condensed</value></prop><prop oor:name="OnScreenOnly" oor:op="fuse"><value>true</value></prop><prop oor:name="SubstituteFont" oor:op="fuse"><value>Open Sans Condensed</value></prop></node></item>
