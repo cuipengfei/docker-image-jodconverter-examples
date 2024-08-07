@@ -1,6 +1,6 @@
-Graphics Backend used: skia
-Passed Tests: 51
-Quirky Tests: 53
+Graphics Backend used: gdi
+Passed Tests: 73
+Quirky Tests: 31
 Failed Tests: 0
 Skipped Tests: 5
 
@@ -8,29 +8,14 @@ Skipped Tests: 5
 No test has been failed.
 
 ---Name of the tests that were Quirky---
-testDrawRectWithLine
-testDrawRectWithPolygon
-testDrawRectWithPolyLine
-testDrawRectWithPolyLineB2D
-testDrawRectWithPolyPolygon
-testDrawRectWithPolyPolygonB2D
-testDrawFilledRectWithPolygonWithAA
-testDrawFilledRectWithPolyPolygonWithAA
-testDrawFilledRectWithPolyPolygon2DWithAA
-testDrawDiamondWithPolygon
-testDrawDiamondWithLine
-testDrawDiamondWithPolyline
-testDrawDiamondWithPolylineB2D
-testLinearGradientBorder
+testDashedLine
+testLinearGradient
 testLinearGradientSteps
-testAxialGradient
 testRadialGradient
-testRadialGradientOfs
 testDrawDropShapeAAWithPolyline
 testDrawDropShapeAAWithPolygon
 testHalfEllipseWithPolyLine
 testHalfEllipseAAWithPolyLine
-testHalfEllipseWithPolyLineB2D
 testHalfEllipseAAWithPolyLineB2D
 testHalfEllipseWithPolygon
 testHalfEllipseAAWithPolygon
@@ -38,8 +23,6 @@ testClosedBezierWithPolyline
 testClosedBezierWithPolygon
 testFilledAsymmetricalDropShape
 testTextDrawing
-testDrawRectangleOnSize1028WithRect
-testDrawRectangleOnSize4096WithRect
 testDrawRectangleOnSize1028WithPixel
 testDrawRectangleOnSize4096WithPixel
 testDrawRectangleOnSize1028WithLine
@@ -54,11 +37,6 @@ testDrawRectangleOnSize1028WithPolyPolygon
 testDrawRectangleOnSize4096WithPolyPolygon
 testDrawRectangleOnSize1028WithPolyPolygonB2D
 testDrawRectangleOnSize4096WithPolygonPolygonB2D
-testDrawOpenPolygonWithPolyLine
-testDrawOpenPolygonWithPolyLineB2D
-testDrawOpenPolygonWithPolygon
-testDrawOpenPolygonWithPolyPolygon
-testDrawOpenPolygonWithPolyPolygonB2D
 testDrawOpenBezierWithPolyLine
 testDrawOpenBezierWithPolyLineB2D
 
