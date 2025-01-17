@@ -36,7 +36,8 @@ RUN ./gradlew -x test :samples:spring-boot-rest:build \
 FROM jodconverter-app-base as rest
 
 # support more fonts
-COPY cjk-fonts/* /usr/share/fonts/cjk/
+# COPY cjk-fonts/* /usr/share/fonts/cjk/
+# ignore noto fonts for this issue: https://ask.libreoffice.org/t/libreoffice-spreadsheet-column-width-number-display-inconsistency/116638
 COPY condensed-fonts/* /usr/share/fonts/condensed/
 COPY ms-sub-fonts/* /usr/share/fonts/ms-sub-fonts/
 
