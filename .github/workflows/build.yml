@@ -6,7 +6,7 @@ on:
 
 env:
   IMAGE_FQDN: ghcr.io/cuipengfei/jodconverter
-  BASE_VERSION: 0.2.1
+  BASE_VERSION: 0.4.0
 
 jobs:
   docker:
